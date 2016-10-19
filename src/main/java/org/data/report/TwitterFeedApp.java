@@ -53,7 +53,14 @@ public class TwitterFeedApp {
 			    if(twitterData != null && twitterData.size() > 0){
 			    	EMailSender sendEmail = new TLSAuthenticationEmail();
 					try {
-						sendEmail.sendEmail(emailAddress, TwitterAppUtility.getEmailContent(twitterData, city));
+						String emailContent = TwitterAppUtility.getEmailContent(twitterData, city);
+						if(null != emailContent && emailContent.length() > 0){
+							sendEmail.sendEmail(emailAddress, TwitterAppUtility.getEmailContent(twitterData, city));
+							logger.error("Emailed the tweets for your city: " +city);
+						}
+						else{
+							System.out.println("There is no tweet now from your city. Try after a while: \t");
+						}
 					} catch (Exception ex) {
 						logger.error(ex.getMessage());
 					}
