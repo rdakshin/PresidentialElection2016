@@ -85,6 +85,10 @@ Note:
 To run this program
  - Update TwitterConfig and EmailConstants with your Twitter and Gmail account info respectively.
  
+ To BE Done
+ ===========
+ Develop REST API with various features - Email the Tweet Info for a City, Email the highest Retweet Item, and provide any additional details needed for the clients
+ 
 Assumptions
 ============
 * Twitter Feed needs to be streamed and to be persisted - at HDFS or some other data store. Think replication and parallel processing
