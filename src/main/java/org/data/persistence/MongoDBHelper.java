@@ -16,7 +16,7 @@ import twitter4j.Status;
 /**
  * @author drajavel
  * MongoDB helper class provides utilities to persist 
- * and fetch data
+ * and fetch data - test
  */
 public class MongoDBHelper {
 	/**
